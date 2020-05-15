@@ -4,8 +4,10 @@
     <title>homepage</title>
 </head>
 <body>
-<p>Hello world!</p>
+<p th:text ="'Hello ' + ${model.userName}">Hello world!</p>
 <br>
+<p>Hello <span th:text="${model.userName}">username</span>, welcome to the application.</p>
 <p>Good Bye</p>
+<p><a th:href="@{/profile?=} + ${model.id}|" href="profile.html">Click Here</a> to view profile </p>
 </body>
 </html>
